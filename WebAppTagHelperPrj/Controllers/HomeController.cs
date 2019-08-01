@@ -12,7 +12,10 @@ namespace WebAppTagHelperPrj.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            ModelAddress modelAddress = new ModelAddress();
+            modelAddress.FirstName = "Peter";
+            modelAddress.LastName = "Long";
+            return View(modelAddress);
         }
 
         public IActionResult Privacy()

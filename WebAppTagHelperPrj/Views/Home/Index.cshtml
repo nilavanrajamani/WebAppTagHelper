@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ModelAddress
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,3 +9,12 @@
 </div>
 
 <auto-price model-name="Chevy"></auto-price>
+<model-exp helper-for="FirstName"></model-exp>
+<view-context  misc-string="@ViewContext.ExecutingFilePath"></view-context>
+
+<tab active-page="Hotel2">
+    <tab-item title="Hotel1">Hotel 1</tab-item>
+    <tab-item title="Hotel2">Hotel 2</tab-item>
+    <tab-item title="Hotel3">Hotel 3</tab-item>
+    <tab-item title="Hotel4">Hotel 4</tab-item>
+</tab>
