@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebAppTagHelperPrj.TagHelpers
 {
+    [HtmlTargetElement("tab-item", ParentTag = "tab")]
     public class TabItemTagHelper : TagHelper
     {
         public string Title { get; set; }
@@ -14,7 +15,7 @@ namespace WebAppTagHelperPrj.TagHelpers
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             string activePage = context.Items["ActivePage"] as string;
-            if(activePage == Title)
+            if (activePage == Title)
             {
                 output.Attributes.Add("class", "active");
             }
